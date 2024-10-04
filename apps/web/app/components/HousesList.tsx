@@ -1,7 +1,7 @@
-import React from 'react'
-import House from './House'
-import { HouseListProps } from '../types/props';
-import { Grid } from '@mui/material';
+import React from "react";
+import House from "./House";
+import { HouseListProps } from "../types/props";
+import { Grid } from "@mui/material";
 
 const HousesList = ({ houses }: HouseListProps) => {
   return (
@@ -12,7 +12,7 @@ const HousesList = ({ houses }: HouseListProps) => {
         </Grid>
       ))}
     </Grid>
-  )
-}
+  );
+};
 
-export default HousesList
+export default HousesList;

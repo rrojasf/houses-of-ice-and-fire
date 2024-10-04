@@ -1,7 +1,7 @@
-import React from 'react'
-import CharacterList from './CharacterList'
-import { HouseProps } from '../types/props'
-import { Card, CardContent, Typography } from '@mui/material'
+import React from "react";
+import CharacterList from "./CharacterList";
+import { HouseProps } from "../types/props";
+import { Card, CardContent, Typography } from "@mui/material";
 
 const House = ({ house }: HouseProps) => {
   return (
@@ -14,7 +14,7 @@ const House = ({ house }: HouseProps) => {
           Region: {house.region}
         </Typography>
         <Typography variant="body2" color="text.secondary" gutterBottom>
-          Words: {house.words || 'None'}
+          Words: {house.words || "None"}
         </Typography>
         {house.swornMembers.length > 0 ? (
           <CharacterList characters={house.swornMembers} />
@@ -25,7 +25,7 @@ const House = ({ house }: HouseProps) => {
         )}
       </CardContent>
     </Card>
-  )
-}
+  );
+};
 
-export default House
+export default House;

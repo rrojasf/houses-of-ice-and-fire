@@ -1,4 +1,4 @@
-import { House, Character } from './common';
+import { House, Character } from "./common";
 
 export interface HouseListProps {
   houses: House[];

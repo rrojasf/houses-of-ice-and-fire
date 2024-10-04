@@ -1,7 +1,7 @@
-import React from 'react'
-import Character from './Character'
-import { CharacterListProps } from '../types/props'
-import { Typography, List } from '@mui/material'
+import React from "react";
+import Character from "./Character";
+import { CharacterListProps } from "../types/props";
+import { Typography, List } from "@mui/material";
 
 const CharacterList = ({ characters }: CharacterListProps) => {
   return (
@@ -15,7 +15,7 @@ const CharacterList = ({ characters }: CharacterListProps) => {
         ))}
       </List>
     </>
-  )
-}
+  );
+};
 
-export default CharacterList
+export default CharacterList;
