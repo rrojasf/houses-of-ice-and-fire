@@ -1,12 +1,20 @@
 import React from 'react'
 import Character from './Character'
+import { CharacterListProps } from '../types/props'
+import { Typography, List } from '@mui/material'
 
-const CharacterList = ({ characters }) => {
+const CharacterList = ({ characters }: CharacterListProps) => {
   return (
-    <div>
-      <h3>Characters</h3>
-      {characters.map(character => <Character character={character} />)}      
-    </div>
+    <>
+      <Typography variant="h6" gutterBottom>
+        Sworn Members
+      </Typography>
+      <List>
+        {characters.map((character) => (
+          <Character key={character.url} character={character} />
+        ))}
+      </List>
+    </>
   )
 }
 

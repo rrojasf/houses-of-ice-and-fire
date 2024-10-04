@@ -1,19 +1,25 @@
 import React from 'react'
+import { CharacterProps } from '../types/props';
+import { ListItem, ListItemText, Chip, Box } from '@mui/material';
 
-const Character = ({ character }) => {
+const Character = ({ character } : CharacterProps) => {
   return (
-    <div>
-      <h4>Character</h4>
-      <div>
-        <p>{character.name}</p>
-          <p>
-            Status: {character.died ? 'Dead' : 'Alive'}
-          </p>
-          {character.died && (
-            <p>Died: {character.died}</p>
-          )}
-      </div>
-    </div>
+    <ListItem>
+      <ListItemText
+        primary={character.name || 'Unknown'}
+        disableTypography
+        secondary={
+          <Box component="span" sx={{ display: 'flex', alignItems: 'center', gap: 1, mt: 0.5 }}>
+            <Chip
+              label={character.died ? "Dead" : "Alive"}
+              color={character.died ? "default" : "primary"}
+              size="small"
+            />
+            {character.died && <span>Died: {character.died}</span>}
+          </Box>
+        }
+      />
+    </ListItem>       
   )
 }
 
