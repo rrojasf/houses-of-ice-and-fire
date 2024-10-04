@@ -17,7 +17,7 @@ const House = ({ house }: HouseProps) => {
           Words: {house.words || "None"}
         </Typography>
         {house.swornMembers.length > 0 ? (
-          <CharacterList characters={house.swornMembers} />
+          <CharacterList characters={house.characters} />
         ) : (
           <Typography variant="body2" color="text.secondary">
             This house has no sworn members
