@@ -33,5 +33,9 @@ export interface House {
   diedOut: string;
   ancestralWeapons: string[];
   cadetBranches: string[];
-  swornMembers: Character[];
+  swornMembers: string[];
+}
+
+export interface HouseWithMembers extends House {
+  characters: Character[];
 }

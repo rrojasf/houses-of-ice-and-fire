@@ -1,11 +1,11 @@
-import { House, Character } from "./common";
+import { Character, HouseWithMembers } from "./common";
 
 export interface HouseListProps {
-  houses: House[];
+  houses: HouseWithMembers[];
 }
 
 export interface HouseProps {
-  house: House;
+  house: HouseWithMembers;
 }
 
 export interface CharacterListProps {
