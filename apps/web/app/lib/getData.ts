@@ -1,14 +1,23 @@
+import { Character } from "../types/common";
+
 const getHouses = async () => {
-  const result = await fetch('https://anapioficeandfire.com/api/houses')
-  return result.json()
-}
+  const result = await fetch("https://anapioficeandfire.com/api/houses");
 
-const getSwornMember = async (url: string) => {
-  const result = await fetch(url)
-  return result.json()
-}
+  if (!result.ok) {
+    throw new Error("Failed to fetch houses");
+  }
 
-export {
-  getHouses,
-  getSwornMember
-}
+  return result.json();
+};
+
+const getSwornMember = async (url: string): Promise<Character> => {
+  const result = await fetch(url);
+
+  if (!result.ok) {
+    throw new Error(`Failed to fetch sworn members at: ${url}`);
+  }
+
+  return result.json();
+};
+
+export { getHouses, getSwornMember };
